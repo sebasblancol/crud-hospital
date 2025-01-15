@@ -1,5 +1,5 @@
 <?php
-include 'db.php';
+include '../db.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $id_paciente = $_POST['id_paciente'];
@@ -7,10 +7,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $fecha = $_POST['fecha'];
     $medicamentos = $_POST['medicamentos'];
     $dosis = $_POST['dosis'];
-    $instrucciones = $_POST['instrucciones'];
+  
 
-    $sql = "INSERT INTO receta (id_paciente, id_medico, fecha, medicamentos, dosis, instrucciones)
-            VALUES ('$id_paciente', '$id_medico', '$fecha', '$medicamentos', '$dosis', '$instrucciones')";
+    $sql = "INSERT INTO receta (id_paciente, id_medico, fecha, medicamentos, dosis)
+            VALUES ('$id_paciente', '$id_medico', '$fecha', '$medicamentos', '$dosis')";
 
     if ($conn->query($sql) === TRUE) {
         echo "Nueva receta creada correctamente";
@@ -25,6 +25,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     Fecha: <input type="date" name="fecha"><br>
     Medicamentos: <textarea name="medicamentos"></textarea><br>
     Dosis: <textarea name="dosis"></textarea><br>
-    Instrucciones: <textarea name="instrucciones"></textarea><br>
+   
     <input type="submit" value="Crear Receta">
 </form>

@@ -1,5 +1,5 @@
 <?php
-include 'db.php';
+include '../db.php';
 
 $sql = "SELECT * FROM receta";
 $result = $conn->query($sql);

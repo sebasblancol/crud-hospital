@@ -2,14 +2,15 @@
 include '../db.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $id_paciente = $_POST['id_paciente'];
+    $pacienteId = $_POST['pacienteId'];
+    $medicoId = $_POST['medicoId'];
     $fecha = $_POST['fecha'];
     $diagnostico = $_POST['diagnostico'];
     $tratamiento = $_POST['tratamiento'];
     $observaciones = $_POST['observaciones'];
 
-    $sql = "INSERT INTO historial_medico (id_paciente, fecha, diagnostico, tratamiento, observaciones)
-            VALUES ('$id_paciente', '$fecha', '$diagnostico', '$tratamiento', '$observaciones')";
+    $sql = "INSERT INTO historial_medico (paciente_id,medico_id, fecha, diagnostico, tratamiento, observaciones)
+            VALUES ('$pacienteId', '$medicoId', '$fecha', '$diagnostico', '$tratamiento', '$observaciones')";
 
     if ($conn->query($sql) === TRUE) {
         echo "Nuevo registro creado correctamente";

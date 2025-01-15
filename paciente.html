@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital - Pacientes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+header {
+    background-color: #1790bd;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    margin-bottom: 20px; /* Añade espacio entre el título y el menú */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+.form-section {
+    background: #fff;
+    border-radius: 8px;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+.form-section h2 {
+    color: #1790bd;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.form-group input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+form button {
+    background-color: #1790bd;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+form button:hover {
+    background-color: #136a8a;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+footer {
+    background-color: #1790bd;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+    </style>
+    <header>
+        <h1>Hospital Central</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="cita.html">Citas</a></li>
+                <li><a href="historial.html">Historial</a></li>
+                <li><a href="medico.html">Médicos</a></li>
+                <li><a href="paciente.html">Pacientes</a></li>
+                <li><a href="receta.html">Recetas</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="form-section">
+            <h2>Gestión de Pacientes</h2>
+            <form method="post" action="./paciente/create.php">
+                <div class="form-group">
+                    <label for="nombre"><i class="fas fa-user"></i> Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="apellido"><i class="fas fa-user"></i> Apellido:</label>
+                    <input type="text" id="apellido" name="apellido" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="genero"><i class="fas fa-home"></i> Genero:</label>
+                    <select name="genero" id="genero"> 
+                       <option value="Masculino">Masculino</option> 
+                       <option value="Femenino">Femenino</option> 
+                       <option value="Otro">Otro</option> 
+                    </select>
+
+                </div>
+
+                
+                <div class="form-group">
+                    <label for="fecha_nacimiento"><i class="fas fa-calendar"></i> Fecha de Nacimiento:</label>
+                    <input type="date" id="fecha_nacimiento" name="fechaNacimiento" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="direccion"><i class="fas fa-home"></i> Dirección:</label>
+                    <input type="text" id="direccion" name="direccion" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono"><i class="fas fa-home"></i> Teléfono:</label>
+                    <input type="text" id="telefono" name="telefono" required>
+                </div>
+
+
+                                
+                <div class="form-group">
+                    <label for="email"><i class="fas fa-phone"></i> Email:</label>
+                    <input type="text" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="tipoDocumento"><i class="fas fa-phone"></i> Tipo Documento:</label>
+                    <input type="text" id="tipoDocumento" name="tipoDocumento" required>
+                </div>
+
+                
+                <div class="form-group">
+                    <label for="numeroDeDocumento"><i class="fas fa-phone"></i> Numero Docuento:</label>
+                    <input type="text" id="numeroDocumento" name="numeroDocumento" required>
+                </div>
+
+
+                
+
+
+                
+                <button type="submit" class="btn-primary"><i class="fas fa-plus"></i> Añadir Paciente</button>
+            </form>
+            
+            
+                   
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Hospital Central. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

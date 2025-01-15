@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital - Recetas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+header {
+    background-color: #1790bd;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    margin-bottom: 20px; /* Añade espacio entre el título y el menú */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+.form-section {
+    background: #fff;
+    border-radius: 8px;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+.form-section h2 {
+    color: #1790bd;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.form-group input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+form button {
+    background-color: #1790bd;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+form button:hover {
+    background-color: #136a8a;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+footer {
+    background-color:  #1790bd;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+    </style>
+    <header>
+        <h1>Hospital Central</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="cita.html">Citas</a></li>
+                <li><a href="historial.html">Historial</a></li>
+                <li><a href="medico.html">Médicos</a></li>
+                <li><a href="paciente.html">Pacientes</a></li>
+                <li><a href="receta.html">Recetas</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="form-section">
+            <h2>Gestión de Recetas</h2>
+            <form method="post" action="./receta/create_receta.php">
+                <div class="form-group">
+                    <label for="id_paciente"><i class="fas fa-user"></i> ID Paciente:</label>
+                    <input type="text" id="id_paciente" name="id_paciente" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="id_medico"><i class="fas fa-user-md"></i> ID Médico:</label>
+                    <input type="text" id="id_medico" name="id_medico" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="medicamento"><i class="fas fa-pills"></i> Medicamento:</label>
+                    <input type="text" id="medicamento" name="medicamentos" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="dosis"><i class="fas fa-prescription-bottle-alt"></i> Dosis:</label>
+                    <input type="text" id="dosis" name="dosis" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="fecha_prescripcion"><i class="fas fa-calendar"></i> Fecha:</label>
+                    <input type="date" id="fecha_prescripcion" name="fecha" required>
+                
+                </div>
+
+               
+                
+                
+                <button type="submit" class="btn-primary"><i class="fas fa-plus"></i> Añadir Receta</button>
+            </form>
+            
+           
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Hospital Central. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

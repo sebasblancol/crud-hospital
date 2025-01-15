@@ -1,10 +1,10 @@
 <?php
-include '../.php';
+include '../db.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $id = $_POST['id'];
 
-    $sql = "DELETE FROM receta WHERE id=$id";
+    $sql = "DELETE FROM contacto WHERE id=$id";
 
     if ($conn->query($sql) === TRUE) {
         echo "Registro eliminado correctamente";
@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
-<form method="post" action="delete_receta.php">
+<form method="post" action="delete_contacto.php">
     ID: <input type="text" name="id"><br>
-    <input type="submit" value="Eliminar Receta">
+    <input type="submit" value="Eliminar contacto">
 </form>

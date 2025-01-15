@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital - Historial</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+header {
+    background-color: #1790bd;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    margin-bottom: 20px; /* Añade espacio entre el título y el menú */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+.form-section {
+    background: #fff;
+    border-radius: 8px;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+.form-section h2 {
+    color: #1790bd;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.form-group input, .form-group textarea, .form-group select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+form button {
+    background-color: #1790bd;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+form button:hover {
+    background-color: #1790bd;
+}
+
+
+
+footer {
+    background-color:  #1790bd;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+    </style>
+
+
+    <header>
+        <h1>Hospital Central</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="cita.html">Citas</a></li>
+                <li><a href="historial.html">Historial</a></li>
+                <li><a href="medico.html">Médicos</a></li>
+                <li><a href="paciente.html">Pacientes</a></li>
+                <li><a href="receta.html">Recetas</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="form-section">
+            <h2>Gestión de Historial</h2>
+            <form method="post" action="./historial/create_historial.php">
+                <div class="form-group">
+                    <label for="idPaciente"><i class="fas fa-user"></i> ID Paciente:</label>
+                    <input type="text" id="idPaciente" name="pacienteId" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="idMedico"><i class="fas fa-calendar"></i> ID Medico:</label>
+                    <input type="text" id="idMedico" name="medicoId" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="fechaHistorial"><i class="fas fa-calendar"></i> Fecha:</label>
+                    <input type="date" id="fechaHistorial" name="fecha" required>
+                </div>
+                
+              
+
+                <div class="form-group">
+                    <label for="diagnostico"><i class="fas fa-edit"></i> Diagnóstico:</label>
+                    <textarea id="diagnostico" name="diagnostico" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="tratamiento"><i class="fas fa-edit"></i> Tratamiento:</label>
+                    <textarea id="tratamiento" name="tratamiento" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="observaciones"><i class="fas fa-edit"></i> Observaciones:</label>
+                    <textarea id="observaciones" name="observaciones" required></textarea>
+                </div>
+                
+                
+                
+                <button type="submit" class="btn-primary"><i class="fas fa-plus"></i> Añadir Historial</button>
+            </form>
+            
+                        
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Hospital Central. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

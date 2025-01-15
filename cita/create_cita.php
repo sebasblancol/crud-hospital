@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
-<!-- mi comentario -->
+<!-- me falta esta por corregir-->
  
 <form method="post" action="create_cita.php">
     ID Paciente: <input type="text" name="id_paciente"><br>

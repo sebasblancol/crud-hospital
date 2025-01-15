@@ -16,4 +16,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
-} ?> <form method="post" action="create_medico.php"> Nombre: <input type="text" name="nombre"><br> Apellido: <input type="text" name="apellido"><br> Especialidad: <input type="text" name="especialidad"><br> Teléfono: <input type="text" name="telefono"><br> Email: <input type="text" name="email"><br> <input type="submit" value="Crear Médico"> </form>
+} ?> 
+
